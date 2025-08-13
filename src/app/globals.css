@@ -120,3 +120,127 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+/* stats.module.css */
+
+/* Container for the whole page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: #1f2937; /* Gray-900 */
+}
+
+/* Page heading */
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #4f46e5; /* Indigo-600 */
+}
+
+/* Grid layout for stats */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Individual stat card */
+.statCard {
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon inside stat card */
+.icon {
+  font-size: 2.5rem;
+  color: #4f46e5; /* Indigo-600 */
+  margin-bottom: 0.5rem;
+}
+
+/* Counter number */
+.counter {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937; /* Gray-900 */
+}
+
+/* Section headings (Languages, Databases, About Me) */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1e3a8a; /* Indigo-800 */
+}
+
+/* Grid for tech icons and names */
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+/* Individual tech item */
+.techItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f3f4f6; /* Gray-100 */
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: default;
+}
+
+.techItem:hover {
+  transform: translateY(-2px);
+  background-color: #e0e7ff; /* Indigo-100 */
+}
+
+/* Icon in tech item */
+.techIcon {
+  font-size: 1.5rem;
+  color: #4f46e5; /* Indigo-600 */
+}
+
+/* About me section */
+.about {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.about h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e3a8a; /* Indigo-800 */
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #374151; /* Gray-700 */
+  margin-bottom: 0.75rem;
+}
+

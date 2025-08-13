@@ -1,9 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Styles from "./stats/stats.module.css";
 import { motion, useAnimation } from "framer-motion";
-import { FaCode, FaDatabase, FaFileCode, FaJava, FaLaptopCode, FaProjectDiagram } from "react-icons/fa";
-import { SiMongodb, SiMysql, SiJavascript, SiPython, SiTypescript } from "react-icons/si";
+import { FaCode, FaDatabase, FaFileCode, FaJava, FaLaptopCode, FaProjectDiagram } from "react-icons/fa"; 
+import { SiMongodb, SiMysql, SiJavascript, SiPython, SiTypescript } from "react-icons/si"; 
 
 const statsData = [
   { icon: <FaProjectDiagram />, label: "Real Projects", value: 10, suffix: "+" },
@@ -43,7 +42,7 @@ export default function StatisticsPage() {
     useEffect(() => {
       let start = 0;
       const end = value;
-      const duration = 1000; // 1s
+      const duration = 1000;
       const increment = end / (duration / 16);
 
       const timer = setInterval(() => {
@@ -57,18 +56,17 @@ export default function StatisticsPage() {
       return () => clearInterval(timer);
     }, [value]);
     return (
-      <span className={Styles.counter}>
-        {count}
-        {suffix}
+      <span style={styles.counter}>
+        {count}{suffix}
       </span>
     );
   };
 
   return (
-    <div className={Styles.container}>
+    <div style={styles.container}>
       {/* Page Heading */}
       <motion.h1
-        className={Styles.heading}
+        style={styles.heading}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -76,17 +74,17 @@ export default function StatisticsPage() {
       </motion.h1>
 
       {/* Stats Grid */}
-      <div className={Styles.statsGrid}>
+      <div style={styles.statsGrid}>
         {statsData.map((stat, i) => (
           <motion.div
-            className={Styles.statCard}
+            style={styles.statCard}
             key={i}
             variants={variants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div className={Styles.icon}>{stat.icon}</div>
+            <div style={styles.icon}>{stat.icon}</div>
             <Counter value={stat.value} suffix={stat.suffix} />
             <p>{stat.label}</p>
           </motion.div>
@@ -95,17 +93,17 @@ export default function StatisticsPage() {
 
       {/* Languages */}
       <motion.div
-        className={Styles.section}
+        style={styles.section}
         variants={variants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
         <h2>Programming Languages</h2>
-        <div className={Styles.techGrid}>
+        <div style={styles.techGrid}>
           {languages.map((lang, idx) => (
-            <div key={idx} className={Styles.techItem}>
-              <span className={Styles.techIcon}>{lang.icon}</span>
+            <div key={idx} style={styles.techItem}>
+              <span style={styles.techIcon}>{lang.icon}</span>
               {lang.name}
             </div>
           ))}
@@ -114,17 +112,17 @@ export default function StatisticsPage() {
 
       {/* Databases */}
       <motion.div
-        className={Styles.section}
+        style={styles.section}
         variants={variants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
         <h2>Databases & Tools</h2>
-        <div className={Styles.techGrid}>
+        <div style={styles.techGrid}>
           {databases.map((db, idx) => (
-            <div key={idx} className={Styles.techItem}>
-              <span className={Styles.techIcon}>{db.icon}</span>
+            <div key={idx} style={styles.techItem}>
+              <span style={styles.techIcon}>{db.icon}</span>
               {db.name}
             </div>
           ))}
@@ -133,7 +131,7 @@ export default function StatisticsPage() {
 
       {/* About Me */}
       <motion.div
-        className={Styles.about}
+        style={styles.about}
         variants={variants}
         initial="hidden"
         whileInView="visible"
@@ -151,3 +149,75 @@ export default function StatisticsPage() {
     </div>
   );
 }
+
+/* CSS-in-JS styles */
+const styles: { [key: string]: React.CSSProperties } = {
+  container: {
+    maxWidth: "1200px",
+    margin: "0 auto",
+    padding: "2rem",
+    fontFamily: "'Inter', sans-serif",
+    color: "#1f2937",
+  },
+  heading: {
+    fontSize: "2.5rem",
+    fontWeight: 700,
+    textAlign: "center",
+    marginBottom: "3rem",
+    color: "#4f46e5",
+  },
+  statsGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+    gap: "2rem",
+    marginBottom: "4rem",
+  },
+  statCard: {
+    backgroundColor: "#ffffff",
+    padding: "2rem 1rem",
+    borderRadius: "1.5rem",
+    textAlign: "center",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.05)",
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+    cursor: "default",
+  },
+  icon: {
+    fontSize: "2.5rem",
+    color: "#4f46e5",
+    marginBottom: "0.5rem",
+  },
+  counter: {
+    fontSize: "2rem",
+    fontWeight: 700,
+    color: "#1f2937",
+  },
+  section: {
+    marginBottom: "3rem",
+  },
+  techGrid: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "1rem 2rem",
+  },
+  techItem: {
+    display: "flex",
+    alignItems: "center",
+    gap: "0.5rem",
+    backgroundColor: "#f3f4f6",
+    padding: "0.5rem 1rem",
+    borderRadius: "1rem",
+    fontWeight: 500,
+    transition: "transform 0.3s ease, background-color 0.3s ease",
+    cursor: "default",
+  },
+  techIcon: {
+    fontSize: "1.5rem",
+    color: "#4f46e5",
+  },
+  about: {
+    backgroundColor: "#ffffff",
+    padding: "2rem",
+    borderRadius: "1.5rem",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.05)",
+  },
+};
