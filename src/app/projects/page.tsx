@@ -18,7 +18,8 @@ export default function ProjectsPage() {
     filter === "All"
       ? dataProjects.data
       : dataProjects.data.filter((project) =>
-           project.languages.includes(filter)
+           project.languages.includes(filter)  
+      
         );   
   // Sort projects by name
   return (
