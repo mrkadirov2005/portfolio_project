@@ -1,0 +1,88 @@
+{
+  "english": {
+    "ielts": [
+      {
+        "src": "/certificates/ielts.jpg",
+        "name": "Achieving Band 7 in IELTS",
+        "description": "On February 26, 2022, I took the IELTS exam. The result was remarkable (Band 7) as it exceeded my expectations. This achievement boosted my confidence in pursuing international education opportunities.",
+        "date": "09/03/2022"
+      },
+      {
+        "src": "/certificates/set_certificates.jpg",
+        "name": "My IELTS Journey",
+        "description": "A 6-month self-study journey combining online resources, mock tests, and daily speaking practice to improve fluency, writing coherence, and listening skills. Consistency was the key to achieving success.",
+        "date": "2021"
+      }
+    ]
+  },
+  "development": {
+    "web_frontend": [
+      {
+        "src": "/certificates/JS_ALGS_FREE.jpg",
+        "name": "JavaScript Algorithms and Data Structures",
+        "description": "Completed the FreeCodeCamp JavaScript Algorithms and Data Structures certification, mastering core JS concepts, problem-solving, and ES6+ syntax.",
+        "date": "2023"
+      },
+      {
+        "src": "/certificates/RES_WEB_DES.jpg",
+        "name": "Responsive Web Design",
+        "description": "Gained skills in modern responsive design principles, CSS Grid, Flexbox, and accessibility-focused layouts.",
+        "date": "2023"
+      },
+      {
+        "src": "/certificates/mohirdev_frontend.png",
+        "name": "Frontend Development Bootcamp - Mohirdev",
+        "description": "Comprehensive program covering HTML, CSS, JavaScript, and React. Built multiple projects including interactive UIs and responsive designs.",
+        "date": "2022"
+      }
+    ],
+    "web_backend": [
+      {
+        "src": "/certificates/node_js.png",
+        "name": "Node.js & Express Backend Development",
+        "description": "Hands-on training in REST APIs, authentication, middleware, and connecting with MongoDB and MySQL.",
+        "date": "2024"
+      },
+      {
+        "src": "/certificates/api.png",
+        "name": "API Design and Development",
+        "description": "Focused on building scalable and secure APIs using Express.js and industry best practices.",
+        "date": "2024"
+      }
+    ]
+  },
+  "university": {
+    "bachelor": {
+      "MU": [
+        {
+          "src": "/certificates/the_best_male_student_of_the_year.jpg",
+          "name": "Best Male Student of the Year - Millat Umidi University",
+          "description": "Awarded for academic excellence, leadership in extracurricular activities, and contribution to student community.",
+          "date": "2024"
+        },
+        {
+          "src": "/certificates/MU.png",
+          "name": "50% Merit-Based Scholarship",
+          "description": "Received a 50% tuition fee waiver for outstanding academic performance and achievements during the admission process.",
+          "date": "2023"
+        }
+      ],
+      "UDEA": [
+        {
+          "src": "/certificates/UDEA.jpg",
+          "name": "Fully Funded Scholarship at UDEA",
+          "description": "Selected for a fully funded scholarship program at Universidad de Antioquia, recognizing academic merit and research potential.",
+          "date": "2022"
+        }
+      ]
+    },
+    "masters": [
+      {
+        "src": "/certificates/masters.png",
+        "name": "Masters Plan",
+        "description": "Currently preparing for a Master's degree in Software Engineering abroad, with target universities in Italy, Germany, and the USA.",
+        "date": "2025"
+      }
+    ]
+  }
+}
