@@ -32,15 +32,25 @@ export const metadata: Metadata = {
   creator: "Muzaffar Abdukadirov",
   publisher: "Muzaffar Abdukadirov",
   metadataBase: new URL("https://m-kadirov.uz"),
+
+  // ✅ Favicons & App Icons
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+
   openGraph: {
     title: "Muzaffar Abdukadirov | Full-Stack Developer",
     description:
       "Portfolio of Muzaffar Abdukadirov showcasing projects in React, Next.js, TypeScript, Python, and Node.js.",
-    url: "https://kadirov.uz",
+    url: "https://m-kadirov.uz",
     siteName: "Muzaffar Portfolio",
     images: [
       {
-        url: "https://www.m-kadirov.uz/profile.jpg", // <- add a preview image
+        url: "/profile.jpg", // ✅ stored in public/profile.jpg
         width: 1200,
         height: 630,
         alt: "Muzaffar Abdukadirov Portfolio",
@@ -49,14 +59,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Muzaffar Abdukadirov | Full-Stack Developer",
     description:
       "Explore the projects and skills of Muzaffar Abdukadirov, a passionate full-stack developer.",
-    images: ["https://www.m-kadirov.uz/profile.jpg"], // <- same preview image
-    creator: "https://t.me/itechnic_me", // optional
+    images: ["/profile.jpg"], // ✅ stored in public/profile.jpg
+    creator: "https://t.me/itechnic_me",
   },
+
   alternates: {
     canonical: "https://m-kadirov.uz",
   },
