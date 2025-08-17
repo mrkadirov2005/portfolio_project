@@ -58,9 +58,9 @@ export default function Home() {
   return (
     <main className="flex">
       {/* Sidebar */}
-
       {/* Main Content */}
       <Container maxWidth="lg" sx={{ marginLeft: sidebarOpen ? "250px" : "80px", transition: "all 0.3s" }}>
+<Image width={200} height={200} alt="mn" src="/logo.png"></Image>
         {/* Hero / About Me */}
         <Paper elevation={3} sx={{ padding: 4, marginTop: 4, textAlign: "center" }}>
           <Image src="/profile.jpg" alt="Profile" width={120} height={120} style={{ borderRadius: "50%" }} />

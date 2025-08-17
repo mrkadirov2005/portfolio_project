@@ -6,7 +6,7 @@ import { SiMongodb, SiMysql, SiJavascript, SiPython, SiTypescript } from "react-
 
 const statsData = [
   { icon: <FaProjectDiagram />, label: "Real Projects", value: 10, suffix: "+" },
-  { icon: <FaLaptopCode />, label: "Practice Projects", value: 50, suffix: "+" },
+  { icon: <FaLaptopCode />, label: "Practice Projects", value: 60, suffix: "+" },
   { icon: <FaCode />, label: "Programming Languages", value: 5, suffix: "" },
   { icon: <FaDatabase />, label: "Databases Used", value: 2, suffix: "" },
 ];

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online HTML Editor</title>
+  <style>
+    header { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between;
+      background-color: gray;
+      box-shadow: 14px 14px 15px 5px orange;
+      border-radius: 20px;
+      padding: 10px 30px;
+      color: white;
+    }
+    body {
+      background-color: white;
+      color: black;
+      transition: 0.3s ease-in-out;
+    }
+    .dark_mode {
+      background-color: black !important;
+      color: white !important;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>m-kadirov.uz</h1>
+    <button id="toggler">Dark mode</button>
+  </header>
+
+  <script>
+    const header_button = document.getElementById("toggler");
+
+    header_button.addEventListener("click", () => {
+      document.body.classList.toggle("dark_mode");
+    });
+  </script> 
+</body> 
+</html>
