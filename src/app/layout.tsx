@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "Welcome to the official portfolio of Muzaffar Abdukadirov, a full-stack developer specializing in React, Next.js, TypeScript, Node.js, and Python. Explore my projects, skills, and experience.",
   keywords: [
     "Muzaffar Abdukadirov",
-    "Muzaffar Portfolio",
+    "Muzaffar Abduqodirov",
     "Full-Stack Developer",
     "React Developer",
     "Next.js Developer",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description:
       "Portfolio of Muzaffar Abdukadirov showcasing projects in React, Next.js, TypeScript, Python, and Node.js.",
     url: "https://m-kadirov.uz",
-    siteName: "Muzaffar Portfolio",
+    siteName: "Muzaffar Abduqodirov",
     images: [
       {
         url: "/profile.jpg", // ✅ stored in public/profile.jpg
