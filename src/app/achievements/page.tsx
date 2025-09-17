@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, ReactElement } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
@@ -45,18 +45,20 @@ const certificatesData: DataStructure = {
       {
         src: "/certificates/ielts.jpg",
         name: "Achieving Band 7 in IELTS",
-        description: "On February 26, 2022, I took the IELTS exam. The result was remarkable (Band 7) as it exceeded my expectations. This achievement boosted my confidence in pursuing international education opportunities.",
+        description:
+          "On February 26, 2022, I took the IELTS exam. The result was remarkable (Band 7) as it exceeded my expectations. This achievement boosted my confidence in pursuing international education opportunities.",
         date: "09/03/2022",
         category: "english",
-        issuer: "British Council"
+        issuer: "British Council",
       },
       {
         src: "/certificates/set_certificates.jpg",
         name: "My IELTS Journey",
-        description: "A 6-month self-study journey combining online resources, mock tests, and daily speaking practice to improve fluency, writing coherence, and listening skills. Consistency was the key to achieving success.",
+        description:
+          "A 6-month self-study journey combining online resources, mock tests, and daily speaking practice to improve fluency, writing coherence, and listening skills. Consistency was the key to achieving success.",
         date: "2021",
         category: "english",
-        issuer: "Self-Study"
+        issuer: "Self-Study",
       },
     ],
   },
@@ -65,44 +67,49 @@ const certificatesData: DataStructure = {
       {
         src: "/certificates/JS_ALGS_FREE.jpg",
         name: "JavaScript Algorithms and Data Structures",
-        description: "Completed the FreeCodeCamp JavaScript Algorithms and Data Structures certification, mastering core JS concepts, problem-solving, and ES6+ syntax.",
+        description:
+          "Completed the FreeCodeCamp JavaScript Algorithms and Data Structures certification, mastering core JS concepts, problem-solving, and ES6+ syntax.",
         date: "2023",
         category: "frontend",
-        issuer: "FreeCodeCamp"
+        issuer: "FreeCodeCamp",
       },
       {
         src: "/certificates/RES_WEB_DES.jpg",
         name: "Responsive Web Design",
-        description: "Gained skills in modern responsive design principles, CSS Grid, Flexbox, and accessibility-focused layouts.",
+        description:
+          "Gained skills in modern responsive design principles, CSS Grid, Flexbox, and accessibility-focused layouts.",
         date: "2023",
         category: "frontend",
-        issuer: "FreeCodeCamp"
+        issuer: "FreeCodeCamp",
       },
       {
         src: "/certificates/mohirdev_frontend.png",
         name: "Frontend Development Bootcamp - Mohirdev",
-        description: "Comprehensive program covering HTML, CSS, JavaScript, and React. Built multiple projects including interactive UIs and responsive designs.",
+        description:
+          "Comprehensive program covering HTML, CSS, JavaScript, and React. Built multiple projects including interactive UIs and responsive designs.",
         date: "2022",
         category: "frontend",
-        issuer: "Mohirdev"
+        issuer: "Mohirdev",
       },
     ],
     web_backend: [
       {
         src: "/certificates/node_js.png",
         name: "Node.js & Express Backend Development",
-        description: "Hands-on training in REST APIs, authentication, middleware, and connecting with MongoDB and MySQL.",
+        description:
+          "Hands-on training in REST APIs, authentication, middleware, and connecting with MongoDB and MySQL.",
         date: "2024",
         category: "backend",
-        issuer: "Online Course"
+        issuer: "Online Course",
       },
       {
         src: "/certificates/api.png",
         name: "API Design and Development",
-        description: "Focused on building scalable and secure APIs using Express.js and industry best practices.",
+        description:
+          "Focused on building scalable and secure APIs using Express.js and industry best practices.",
         date: "2024",
         category: "backend",
-        issuer: "Online Course"
+        issuer: "Online Course",
       },
     ],
   },
@@ -112,28 +119,31 @@ const certificatesData: DataStructure = {
         {
           src: "/certificates/the_best_male_student_of_the_year.jpg",
           name: "Best Male Student of the Year - Millat Umidi University",
-          description: "Awarded for academic excellence, leadership in extracurricular activities, and contribution to student community.",
+          description:
+            "Awarded for academic excellence, leadership in extracurricular activities, and contribution to student community.",
           date: "2024",
           category: "bachelor",
-          issuer: "Millat Umidi University"
+          issuer: "Millat Umidi University",
         },
         {
           src: "/certificates/MU.png",
           name: "50% Merit-Based Scholarship",
-          description: "Received a 50% tuition fee waiver for outstanding academic performance and achievements during the admission process.",
+          description:
+            "Received a 50% tuition fee waiver for outstanding academic performance and achievements during the admission process.",
           date: "2023",
           category: "bachelor",
-          issuer: "Millat Umidi University"
+          issuer: "Millat Umidi University",
         },
       ],
       UDEA: [
         {
           src: "/certificates/UDEA.jpg",
           name: "Fully Funded Scholarship at UDEA",
-          description: "Selected for a fully funded scholarship program at Universidad de Antioquia, recognizing academic merit and research potential.",
+          description:
+            "Selected for a fully funded scholarship program at Universidad de Antioquia, recognizing academic merit and research potential.",
           date: "2022",
           category: "bachelor",
-          issuer: "Universidad de Antioquia"
+          issuer: "Universidad de Antioquia",
         },
       ],
     },
@@ -141,10 +151,11 @@ const certificatesData: DataStructure = {
       {
         src: "/certificates/masters.png",
         name: "Masters Plan",
-        description: "Currently preparing for a Master's degree in Software Engineering abroad, with target universities in Italy, Germany, and the USA.",
+        description:
+          "Currently preparing for a Master's degree in Software Engineering abroad, with target universities in Italy, Germany, and the USA.",
         date: "2025",
         category: "masters",
-        issuer: "Future Goal"
+        issuer: "Future Goal",
       },
     ],
   },
@@ -152,27 +163,28 @@ const certificatesData: DataStructure = {
 
 // Category colors
 const categoryColors: Record<string, string> = {
-  "all": "#6366F1",
-  "english": "#FF6B6B",
-  "frontend": "#4ECDC4",
-  "backend": "#5568FE",
-  "bachelor": "#FFD166",
-  "masters": "#6A0572"
+  all: "#6366F1",
+  english: "#FF6B6B",
+  frontend: "#4ECDC4",
+  backend: "#5568FE",
+  bachelor: "#FFD166",
+  masters: "#6A0572",
 };
 
-// Category icons
-const categoryIcons: Record<string, JSX.Element> = {
-  "all": <FaCertificate />,
-  "english": <FaGlobe />,
-  "frontend": <FaCode />,
-  "backend": <FaCode />,
-  "bachelor": <FaUniversity />,
-  "masters": <FaGraduationCap />
+// ✅ FIXED: Category icons
+const categoryIcons: Record<string, ReactElement> = {
+  all: <FaCertificate />,
+  english: <FaGlobe />,
+  frontend: <FaCode />,
+  backend: <FaCode />,
+  bachelor: <FaUniversity />,
+  masters: <FaGraduationCap />,
 };
 
 const Certificates: React.FC = () => {
   const [filter, setFilter] = useState<string>("all");
-  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
+  const [selectedCertificate, setSelectedCertificate] =
+    useState<Certificate | null>(null);
 
   const getAllCertificates = (): Certificate[] => {
     let all: Certificate[] = [];
@@ -220,7 +232,8 @@ const Certificates: React.FC = () => {
           My Certificates & Achievements
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          A collection of my academic achievements, professional certifications, and learning milestones
+          A collection of my academic achievements, professional certifications,
+          and learning milestones
         </p>
       </motion.div>
 
@@ -231,27 +244,30 @@ const Certificates: React.FC = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="flex flex-wrap justify-center gap-3 mb-8"
       >
-        {["all", "english", "frontend", "backend", "bachelor", "masters"].map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setFilter(cat)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-all ${
-              filter === cat 
-                ? "text-white shadow-lg" 
-                : "bg-white text-gray-700 shadow-md hover:shadow-lg"
-            }`}
-            style={{
-              background: filter === cat 
-                ? `linear-gradient(135deg, ${categoryColors[cat]}, ${categoryColors[cat]}80)` 
-                : "white"
-            }}
-          >
-            <span className="text-sm">{categoryIcons[cat]}</span>
-            <span className="capitalize">
-              {cat === "all" ? "All Certificates" : cat}
-            </span>
-          </button>
-        ))}
+        {["all", "english", "frontend", "backend", "bachelor", "masters"].map(
+          (cat) => (
+            <button
+              key={cat}
+              onClick={() => setFilter(cat)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-all ${
+                filter === cat
+                  ? "text-white shadow-lg"
+                  : "bg-white text-gray-700 shadow-md hover:shadow-lg"
+              }`}
+              style={{
+                background:
+                  filter === cat
+                    ? `linear-gradient(135deg, ${categoryColors[cat]}, ${categoryColors[cat]}80)`
+                    : "white",
+              }}
+            >
+              <span className="text-sm">{categoryIcons[cat]}</span>
+              <span className="capitalize">
+                {cat === "all" ? "All Certificates" : cat}
+              </span>
+            </button>
+          )
+        )}
       </motion.div>
 
       {/* Certificates Grid */}
@@ -281,7 +297,7 @@ const Certificates: React.FC = () => {
                   className="object-cover transition-transform duration-300 hover:scale-105"
                 />
                 <div className="absolute top-4 right-4">
-                  <span 
+                  <span
                     className="px-3 py-1 rounded-full text-xs font-bold text-white shadow-md"
                     style={{ backgroundColor: categoryColors[cert.category] }}
                   >
@@ -289,28 +305,28 @@ const Certificates: React.FC = () => {
                   </span>
                 </div>
               </div>
-              
+
               <div className="p-5">
                 <h3 className="text-lg font-bold mb-2 text-gray-800 line-clamp-2">
                   {cert.name}
                 </h3>
-                
+
                 <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
                   <FaCalendarAlt />
                   <span>{cert.date}</span>
                 </div>
-                
+
                 {cert.issuer && (
                   <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
                     <FaAward />
                     <span className="font-medium">{cert.issuer}</span>
                   </div>
                 )}
-                
+
                 <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                   {cert.description}
                 </p>
-                
+
                 <div className="flex justify-between items-center">
                   <span className="text-xs font-medium px-3 py-1 rounded-full bg-gray-100 text-gray-700">
                     View Details
@@ -332,7 +348,9 @@ const Certificates: React.FC = () => {
           className="text-center py-12 bg-white rounded-2xl shadow-md mt-8"
         >
           <div className="text-6xl mb-4">📭</div>
-          <h3 className="text-xl font-semibold text-gray-700 mb-2">No certificates found</h3>
+          <h3 className="text-xl font-semibold text-gray-700 mb-2">
+            No certificates found
+          </h3>
           <p className="text-gray-500">Try selecting a different category</p>
         </motion.div>
       )}
@@ -368,27 +386,30 @@ const Certificates: React.FC = () => {
                   ✕
                 </button>
               </div>
-              
+
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span 
+                  <span
                     className="px-3 py-1 rounded-full text-xs font-bold text-white"
-                    style={{ backgroundColor: categoryColors[selectedCertificate.category] }}
+                    style={{
+                      backgroundColor:
+                        categoryColors[selectedCertificate.category],
+                    }}
                   >
                     {selectedCertificate.category.toUpperCase()}
                   </span>
                 </div>
-                
+
                 <h2 className="text-2xl font-bold mb-3 text-gray-800">
                   {selectedCertificate.name}
                 </h2>
-                
+
                 <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
                   <div className="flex items-center gap-1">
                     <FaCalendarAlt />
                     <span>{selectedCertificate.date}</span>
                   </div>
-                  
+
                   {selectedCertificate.issuer && (
                     <div className="flex items-center gap-1">
                       <FaAward />
@@ -396,14 +417,20 @@ const Certificates: React.FC = () => {
                     </div>
                   )}
                 </div>
-                
+
                 <p className="text-gray-700 mb-6">
                   {selectedCertificate.description}
                 </p>
-                
+
                 <button
                   className="w-full py-3 rounded-lg font-medium text-white transition-all hover:opacity-90"
-                  style={{ background: `linear-gradient(135deg, ${categoryColors[selectedCertificate.category]}, ${categoryColors[selectedCertificate.category]}80)` }}
+                  style={{
+                    background: `linear-gradient(135deg, ${
+                      categoryColors[selectedCertificate.category]
+                    }, ${
+                      categoryColors[selectedCertificate.category]
+                    }80)`,
+                  }}
                   onClick={() => setSelectedCertificate(null)}
                 >
                   Close
