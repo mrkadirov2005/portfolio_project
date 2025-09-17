@@ -77,6 +77,12 @@ export default function Sidebar() {
             >
              🎗️ Achievements
             </Link>
+             <Link
+              href="/mu_career_camp"
+              className="block px-4 py-2 rounded hover:bg-blue-100 transition"
+            >
+             Career Camp MU
+            </Link>
             <Link
               href="/contact"
               className="block px-4 py-2 rounded hover:bg-blue-100 transition"
