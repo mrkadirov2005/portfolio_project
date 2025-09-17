@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaCode, FaDatabase, FaFileCode, FaJava, FaLaptopCode, FaProjectDiagram } from "react-icons/fa"; 
 import { SiMongodb, SiMysql, SiJavascript, SiPython, SiTypescript } from "react-icons/si"; 
 

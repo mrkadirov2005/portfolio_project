@@ -16,7 +16,6 @@ import {
   IconButton,
   InputAdornment,
   useTheme,
-  useMediaQuery,
   Divider,
   Fade,
   Slide,

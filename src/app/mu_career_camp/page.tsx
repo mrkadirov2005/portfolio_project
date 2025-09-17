@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Button, IconButton, Drawer } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import Image from 'next/image';
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,7 +19,13 @@ export default function Home() {
       <header className="bg-blue-800 text-white py-4 px-4 sm:px-6 shadow-md">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <img src="/logo.jpg" alt="University Logo" className="h-10 md:h-12 mr-3" />
+            <Image 
+              src="/logo.jpg" 
+              alt="University Logo" 
+              width={48}
+              height={48}
+              className="h-10 md:h-12 mr-3" 
+            />
             <h1 className="text-[0px] md:text-2xl font-bold text-white">MU CAREER CAMP</h1>
           </div>
           
@@ -100,9 +107,27 @@ export default function Home() {
           
           <h3 className="text-2xl md:text-3xl mt-12 md:mt-16 mb-6 md:mb-8 font-semibold">Our Official Partners</h3>
           <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mt-4 md:mt-6">
-            <img className="h-16 md:h-20 " src="/youth_affairs_agency.jpg" alt="Youth Affairs Agency"/>
-            <img className="h-16 md:h-20 " src="/higher_education_ministry.jpg" alt="Ministry of Higher Education" />
-            <img className="h-16 md:h-20 object-contain" src="/karyera_maktabi.jpg" alt="Karyera Maktabi"/>
+            <Image 
+              className="h-16 md:h-20" 
+              src="/youth_affairs_agency.jpg" 
+              alt="Youth Affairs Agency"
+              width={80}
+              height={80}
+            />
+            <Image 
+              className="h-16 md:h-20" 
+              src="/higher_education_ministry.jpg" 
+              alt="Ministry of Higher Education"
+              width={80}
+              height={80}
+            />
+            <Image 
+              className="h-16 md:h-20 object-contain" 
+              src="/karyera_maktabi.jpg" 
+              alt="Karyera Maktabi"
+              width={80}
+              height={80}
+            />
           </div>
         </div>
       </section>
@@ -141,7 +166,7 @@ export default function Home() {
       {/* Lessons Section */}
       <section id="lessons" className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
-          <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-800">What You'll Learn</h3>
+          <h3 className="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-800">What You&apos;ll Learn</h3>
           <div className="h-1 w-24 bg-amber-500 mx-auto mb-10 md:mb-12"></div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
@@ -214,7 +239,7 @@ export default function Home() {
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-blue-600 rounded-full mx-auto mb-4 md:mb-6 flex items-center justify-center text-xl md:text-2xl">
                   {student.name.charAt(0)}
                 </div>
-                <p className="italic text-base md:text-lg mb-4 md:mb-6">"{student.quote}"</p>
+                <p className="italic text-base md:text-lg mb-4 md:mb-6">&quot;{student.quote}&quot;</p>
                 <h4 className="font-semibold text-lg md:text-xl">{student.name}</h4>
                 <p className="text-blue-200 text-sm md:text-base">{student.major}</p>
               </div>

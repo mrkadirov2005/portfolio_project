@@ -19,9 +19,7 @@ interface UniversityScore {
 export default function Home() { 
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false); 
 
-  const toggleSidebar = () => { 
-    setSidebarOpen(!sidebarOpen); 
-  };
+ 
 
   const universityScores: UniversityScore[] = [
     { id: 1, course: "Applied Mathematics 1", credit: "180 / 6", score: "100 / 5", semester: "1", grade: "A" },

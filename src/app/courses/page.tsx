@@ -84,10 +84,7 @@ const onlineCourses: Course[] = [
 ];
 
 // Color palette for different statuses
-const statusColors = {
-  "completed": ["#4CAF50", "#2E7D32"],
-  "in-progress": ["#FF9800", "#EF6C00"]
-};
+
 
 export default function OnlineCourses() {
   const [filter, setFilter] = useState<FilterType>("all");
