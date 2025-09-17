@@ -61,7 +61,6 @@ interface SnackbarState {
 
 export default function ContactPage() {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [form, setForm] = useState<FormState>({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState<boolean>(false);
   const [snackbar, setSnackbar] = useState<SnackbarState>({
@@ -105,7 +104,7 @@ export default function ContactPage() {
     const commonParams = {
       name: form.name,
       email: form.email,
-      title: "We've received your message",
+      title: "We&apos;ve received your message",
       message: form.message,
     };
 
@@ -156,11 +155,11 @@ export default function ContactPage() {
               mb: 2
             }}
           >
-            Let's Connect
+            Let&apos;s Connect
           </Typography>
           
           <Typography variant="h6" textAlign="center" color="text.secondary" sx={{ mb: 4 }}>
-            I'm always excited to take on new projects and collaborate. Let's bring your ideas to life!
+            I&apos;m always excited to take on new projects and collaborate. Let&apos;s bring your ideas to life!
           </Typography>
 
           <Grid container spacing={4}>
@@ -181,7 +180,7 @@ export default function ContactPage() {
                 </Typography>
                 
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-                  Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.
+                  Have a question or want to work together? Fill out the form below and I&apos;ll get back to you as soon as possible.
                 </Typography>
 
                 <Box component="form" onSubmit={handleSubmit}>
