@@ -88,7 +88,7 @@ export default function RootLayout({
         <Sidebar />
 
         {/* Main Content */}
-        <main className="flex-1 p-6">{children}</main>
+        <main className="flex-1">{children}</main>
       </body>
     </html>
   );
